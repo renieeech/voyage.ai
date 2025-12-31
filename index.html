@@ -147,3 +147,311 @@
     }
     .visualBadge{
       position:absolute;left:14px;bottom:14px;
+      padding:10px 12px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      color:rgba(255,255,255,.78);
+      font-size:13px;max-width: 90%;
+      backdrop-filter: blur(8px);
+    }
+
+    /* Sections (airy) */
+    section{padding:88px 0}
+    .head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:20px}
+    .title{
+      margin:0;
+      font-family:Fraunces,ui-serif,Georgia,serif;
+      font-size:34px;letter-spacing:-.03em;
+    }
+    .desc{margin:8px 0 0;color:var(--muted);max-width:78ch;font-size:16px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow2);
+      padding:22px;
+    }
+    .card h3{margin:0 0 10px;font-size:16px;letter-spacing:-.01em}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Image cards */
+    .imgCard{padding:0;overflow:hidden}
+    .imgCard img{width:100%;height:220px;object-fit:cover;display:block}
+    .imgBody{padding:18px 20px 22px}
+    .pillRow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .pill{
+      font-size:12px;color:rgba(11,18,32,.66);
+      padding:6px 10px;border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.55);
+    }
+
+    /* Big quote */
+    .quote{
+      border-radius:28px;
+      padding:34px;
+      background:linear-gradient(180deg, rgba(42,75,255,.10), rgba(255,255,255,.60));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow2);
+    }
+    .quote p{
+      margin:0;
+      font-family:Fraunces,ui-serif,Georgia,serif;
+      font-size:30px;
+      letter-spacing:-.03em;
+      line-height:1.25;
+    }
+    .quote small{display:block;margin-top:14px;color:var(--muted);font-size:14px}
+
+    /* Apply */
+    .applyBox{
+      border-radius:30px;
+      padding:26px;
+      background:rgba(255,255,255,.75);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      display:grid;grid-template-columns:1fr .9fr;gap:14px;
+      align-items:start;
+    }
+    .applyBox .btn{width:100%;justify-content:center;height:46px}
+    .hint{margin-top:10px;color:var(--muted);font-size:13px}
+
+    footer{
+      padding:34px 0 44px;
+      border-top:1px solid var(--line);
+      color:rgba(11,18,32,.60);
+      background:rgba(255,255,255,.35);
+    }
+    .frow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+
+    @media (min-width: 980px){ nav{display:flex} }
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns:1fr}
+      h1{font-size:44px}
+      section{padding:64px 0}
+      .applyBox{grid-template-columns:1fr}
+    }
+    @media (max-width: 760px){
+      .grid3,.grid2{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .heroGrid{padding:22px}
+      .visual{min-height:280px}
+      .quote p{font-size:24px}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="row">
+        <a class="brand" href="#top" aria-label="voyage.ai">
+          <span class="logo-pill"><img src="./logo.jpeg" alt="voyage.ai logo"></span>
+          <b>voyage.ai</b>
+        </a>
+
+        <nav>
+          <a href="#thesis">Thesis</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#process">Process</a>
+          <a href="#insights">Insights</a>
+          <a href="#apply">Apply</a>
+        </nav>
+
+        <div style="display:flex;gap:10px;align-items:center">
+          <a class="btn" href="#apply">Get in touch</a>
+          <a class="btn primary" href="#apply">Apply via email</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="heroBox">
+        <div class="heroGrid">
+          <div>
+            <div class="kicker"><span class="dot"></span><span>Incubation studio · Social × AI Tools · Middle East / India / SEA</span></div>
+            <h1>Capital discipline.<br/>Product velocity.</h1>
+            <p class="sub">
+              我们用“资本式纪律”做孵化：少废话、快验证、重指标。把出海社交与 AI 工具的增长，
+              变成可复用的周节奏。
+            </p>
+
+            <div class="cta">
+              <a class="btn primary" href="#apply">Apply (Email)</a>
+              <a class="btn" href="#portfolio">View focus areas</a>
+            </div>
+
+            <div class="stats">
+              <div class="stat"><div class="l">Incubated</div><div class="v">5 projects</div></div>
+              <div class="stat"><div class="l">Peak revenue</div><div class="v">$300k / mo</div></div>
+              <div class="stat"><div class="l">Markets</div><div class="v">ME · IN · SEA</div></div>
+            </div>
+            <div class="fine">Data shown reflects peak months of past incubation projects, illustrating repeatable execution patterns.</div>
+          </div>
+
+          <div class="visual">
+            <!-- Image 1: city night (capital/global vibe) -->
+            <img alt="market skyline" src="https://source.unsplash.com/JnX-xIdzYiQ/1400x1200">
+            <div class="visualBadge">
+              Built for operators: GTM + retention loops + pricing discipline.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- THESIS -->
+    <section id="thesis">
+      <div class="head">
+        <div>
+          <h2 class="title">Thesis</h2>
+          <p class="desc">对标“资本网站”的表达方式：少句子、多要点。我们只做能被指标证明的增长。</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>Profit-first</h3>
+          <p>先跑出付费意愿与留存信号，再扩大范围与团队。</p>
+        </div>
+        <div class="card">
+          <h3>Distribution-native</h3>
+          <p>从 Day 1 设计渠道与转化路径，增长不是最后补丁。</p>
+        </div>
+        <div class="card">
+          <h3>Weekly cadence</h3>
+          <p>实验 → 复盘 → 迭代，让结果可复制、可预测。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section style="padding-top:0">
+      <div class="quote">
+        <p>We don’t “build more”. We build what moves the metric.</p>
+        <small>出海社交与 AI 工具的共同点：方向清晰 + 反馈快 + 复利增长。</small>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO (image-led, less text) -->
+    <section id="portfolio">
+      <div class="head">
+        <div>
+          <h2 class="title">Portfolio snapshots</h2>
+          <p class="desc">你可以先用匿名卡片占位；后续再替换成真实项目名称/链接。</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card imgCard">
+          <!-- Image 2: abstract tech (premium tech vibe) -->
+          <img alt="abstract gradient" src="https://source.unsplash.com/XCwh6mdPGB4/1200x800">
+          <div class="imgBody">
+            <h3>Social (Voice / Rooms)</h3>
+            <p>Retention loops + monetization path. Built for ME/IN/SEA behaviors.</p>
+            <div class="pillRow">
+              <span class="pill">Middle East</span><span class="pill">Retention</span><span class="pill">ARPPU</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card imgCard">
+          <!-- Image 3: founder working -->
+          <img alt="founder working" src="https://source.unsplash.com/ZI_EpN9_Vng/1200x800">
+          <div class="imgBody">
+            <h3>AI Tools (Operator-ready)</h3>
+            <p>Clear packaging, pricing ladder, and conversion funnel.</p>
+            <div class="pillRow">
+              <span class="pill">AI</span><span class="pill">Pricing</span><span class="pill">Landing test</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card imgCard">
+          <img alt="market skyline" src="https://source.unsplash.com/AkDzzpXJlbc/1200x800">
+          <div class="imgBody">
+            <h3>Growth systems</h3>
+            <p>One weekly rhythm: hypothesis → experiment → learn → ship.</p>
+            <div class="pillRow">
+              <span class="pill">Cadence</span><span class="pill">GTM</span><span class="pill">Measurement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="head">
+        <div>
+          <h2 class="title">Process</h2>
+          <p class="desc">流程像资本机构一样“可预期”：每一步都有交付物。</p>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>01 · Diagnose</h3>
+          <p>目标用户、价值点、1–2 个关键指标（留存/付费/获客成本）。</p>
+        </div>
+        <div class="card">
+          <h3>02 · Validate</h3>
+          <p>落地页 + 脚本 + 冷启动渠道，最快拿到真实信号。</p>
+        </div>
+        <div class="card">
+          <h3>03 · Build</h3>
+          <p>只做能交付增长的 MVP（基础埋点/监控/评测不缺席）。</p>
+        </div>
+        <div class="card">
+          <h3>04 · Scale</h3>
+          <p>把增长做成例行工作：每周实验、每周复盘、持续迭代。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIGHTS -->
+    <section id="insights">
+      <div class="head">
+        <div>
+          <h2 class="title">Insights</h2>
+          <p class="desc">用内容呈现方法论（先占位也可以，后续你把标题替换成真实文章）。</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>Playbook: Social cold start</h3>
+          <p>渠道组合 + 新手激活 + 互动结构，让留存更早出现。</p>
+        </div>
+        <div class="card">
+          <h3>Playbook: AI pricing</h3>
+          <p>价值点提炼 → 方案包装 → 定价梯度 → 付费路径。</p>
+        </div>
+        <div class="card">
+          <h3>Template: Weekly experiments</h3>
+          <p>假设、成本、信号、复盘，4 周节奏稳定推进。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLY -->
+    <section id="apply">
+      <div class="head">
+        <div>
+          <h2 class="title">Apply</h2>
+          <p class="desc">一封邮件即可。我们更偏好能快速执行、愿意验证、每周能推进一次实验的团队/个人。</p>
+        </div>
+      </div>
+
+      <div class="applyBox">
+        <div>
+          <h3 style="margin:0 0 8px;font-size:18px;letter-spacing:-.01em">Email: bp@voyageai.com</h3>
+          <p style="margin:0;color:var(--muted)">点击按钮会自动打开你的邮箱并预填申请信息。</p>
+          <div style="margin-top:16px">
+            <a class="btn primary"
+               href="mailto:bp@voyageai.com?subject=Voyage.ai%20Application&body=Hi%20Voyage%2C%0A%0A1)%20One-line%20intro%3A%0A2)%20Product%20type%20(Social%2FAI%20Tool)%3A%0A3)%20Market%20(ME%2FIN%2FSEA%2FGlobal)%3A%0A4)%20Stage%20(Idea%2FPrototype%2FMVP%2FLive)%3A%
