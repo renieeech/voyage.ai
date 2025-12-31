@@ -147,19 +147,15 @@
     .hero{padding:26px 0 0}
     .heroCard{
       position:relative;
-      border-radius:34px;
+      border-radius:46px;
       overflow:hidden;
-      border:1px solid rgba(255,255,255,.10);
-      background:
-        radial-gradient(900px 520px at 20% 0%, rgba(124,58,237,.28), transparent 60%),
-        radial-gradient(900px 520px at 90% 10%, rgba(16,185,129,.18), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      box-shadow:var(--shadow);
-      min-height: 520px;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 40px 140px rgba(0,0,0,.55);
+      min-height: 680px;
     }
     .heroBg{
       position:absolute;inset:0;
-      background: url("https://images.unsplash.com/photo-1526401485004-2aa7c8f5d2bb?auto=format&fit=crop&w=2400&q=80") center/cover no-repeat;
+      background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2600&q=80") center/cover no-repeat;
       filter:saturate(.92) contrast(1.06) brightness(.78);
       opacity:.85;
     }
@@ -170,14 +166,24 @@
         radial-gradient(900px 520px at 25% 10%, rgba(124,58,237,.22), transparent 60%),
         radial-gradient(900px 520px at 85% 0%, rgba(16,185,129,.14), transparent 60%);
     }
+    .heroCard::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 1px, transparent 1px 7px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.04) 0 1px, transparent 1px 9px);
+  opacity:.06;
+  mix-blend-mode: overlay;
+  pointer-events:none;
+}
     .heroInner{
       position:relative;
-      padding:54px;
+      padding:78px;
       display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:24px;
+      grid-template-columns:1.2fr .8fr;
+      gap:34px;
       align-items:end;
-      min-height: 520px;
+      min-height: 680px;
     }
 
     .kicker{
@@ -191,11 +197,11 @@
     }
     .dot{width:8px;height:8px;border-radius:99px;background:var(--accent2)}
     h1{
-      margin:18px 0 12px;
+      margin:18px 0 14px;
       font-family:Fraunces,ui-serif,Georgia,serif;
-      font-size:66px;
-      line-height:1.02;
-      letter-spacing:-.05em;
+      font-size:84px;
+      line-height:0.98;
+      letter-spacing:-.06em;
     }
     .lead{margin:0;color:rgba(238,242,255,.78);font-size:17px;max-width:64ch}
     .heroCta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
@@ -219,25 +225,26 @@
 
     /* Right panel */
     .heroPanel{
-      border-radius:22px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.05);
-      padding:18px;
-      display:grid;gap:10px;
+      border-radius:26px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(0,0,0,.22);
+      padding:22px;
+      display:grid;
+      gap:14px;
       align-self:stretch;
-      min-height: 360px;
+      min-height: 420px;
+      backdrop-filter: blur(10px);
     }
     .panelTitle{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(238,242,255,.62)}
     .panelItem{
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.04);
-      border-radius:16px;
-      padding:12px;
-      color:rgba(238,242,255,.80);
+      border:0;
+      background:rgba(255,255,255,.06);
+      border-radius:18px;
+      padding:16px 16px;
+      color:rgba(238,242,255,.86);
       font-size:14px;
     }
-    .panelItem b{display:block;font-weight:650;margin-bottom:6px}
-    .panelItem span{display:block;color:rgba(238,242,255,.66);font-size:13px}
+    .panelItem span{color:rgba(238,242,255,.70)}
 
     /* Sections */
     section{padding:84px 0}
