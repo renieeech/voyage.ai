@@ -1,10 +1,13 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>voyage.ai — Capital Discipline. Product Velocity.</title>
-  <meta name="description" content="voyage.ai 是小而精的孵化器，专注出海社交与 AI 工具。孵化 5 个项目，覆盖中东/印度/东南亚，单产品峰值 $300k/月。申请：bp@voyageai.com" />
+  <title>voyage.ai — Capital discipline. Product velocity.</title>
+  <meta name="description" content="voyage.ai is a small, operator-led incubation studio for overseas social products and AI tools. Built for ME/IN/SEA. Incubated 5 projects with peak $300k/mo per product. Apply: bp@voyageai.com" />
+  <meta property="og:title" content="voyage.ai — Capital discipline. Product velocity." />
+  <meta property="og:description" content="A small, operator-led incubation studio for overseas social & AI tools in ME/IN/SEA. Incubated 5 projects, peak $300k/mo per product. Apply: bp@voyageai.com" />
+  <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,446 +15,776 @@
 
   <style>
     :root{
-      --bg:#f7f7f5;
-      --ink:#0b1220;
-      --muted:rgba(11,18,32,.62);
-      --line:rgba(11,18,32,.10);
-      --card:rgba(255,255,255,.72);
-      --shadow:0 18px 50px rgba(11,18,32,.10);
-      --shadow2:0 10px 28px rgba(11,18,32,.08);
+      --bg:#0b0f18;
+      --bg2:#070a11;
+      --text:#eef2ff;
+      --muted:rgba(238,242,255,.72);
+      --line:rgba(238,242,255,.14);
+      --card:rgba(255,255,255,.06);
+      --card2:rgba(255,255,255,.04);
+      --shadow:0 28px 90px rgba(0,0,0,.45);
       --r:22px;
       --r2:16px;
-      --max:1160px;
-      --accent:#2a4bff;
+      --max:1120px;
+      --accent:#7c3aed;
+      --accent2:#10b981;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      color:var(--ink);
-      background:
-        radial-gradient(900px 520px at 12% 0%, rgba(42,75,255,.10), transparent 60%),
-        radial-gradient(720px 480px at 90% 0%, rgba(16,185,129,.08), transparent 55%),
-        var(--bg);
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-      line-height:1.7;
-      letter-spacing:-0.01em;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background: radial-gradient(1200px 700px at 20% 0%, rgba(124,58,237,.22), transparent 55%),
+                  radial-gradient(900px 520px at 85% 10%, rgba(16,185,129,.14), transparent 60%),
+                  linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      color:var(--text);
+      line-height:1.6;
+      letter-spacing:-.01em;
     }
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
 
-    /* Top */
-    .top{
-      position:sticky;top:0;z-index:50;
-      background:rgba(247,247,245,.72);
+    /* Top nav (sticky) */
+    .topbar{
+      position:sticky;top:0;z-index:60;
+      background:rgba(7,10,17,.62);
       backdrop-filter:blur(10px);
-      border-bottom:1px solid var(--line);
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
-    .top .row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+    .toprow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
     .brand{display:flex;align-items:center;gap:12px;min-width:220px}
-    .logo-pill{
-      padding:8px 12px;border-radius:999px;
-      background:#0b1220;border:1px solid rgba(255,255,255,.12);
-      box-shadow:0 12px 26px rgba(2,6,23,.18);
-      display:flex;align-items:center;justify-content:center;
+    .logoWrap{
+      height:36px;width:36px;border-radius:12px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.10);
+      overflow:hidden;display:flex;align-items:center;justify-content:center;
     }
-    .logo-pill img{height:26px;width:auto;display:block;border-radius:10px}
-    .brand b{font-weight:650}
-    nav{display:none;gap:8px;color:var(--muted);font-size:14px}
-    nav a{padding:8px 12px;border-radius:999px}
-    nav a:hover{background:rgba(255,255,255,.7);box-shadow:var(--shadow2);color:var(--ink)}
+    .logoWrap img{width:100%;height:100%;object-fit:cover;display:block}
+    .brand b{font-weight:650;letter-spacing:-.01em}
+    nav{display:none;gap:18px;color:rgba(238,242,255,.72);font-size:14px}
+    nav a{padding:8px 10px;border-radius:999px}
+    nav a:hover{background:rgba(255,255,255,.06)}
+
+    .actions{display:flex;align-items:center;gap:10px}
     .btn{
       height:42px;padding:0 16px;border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.72);
-      box-shadow:var(--shadow2);
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      font-size:14px;font-weight:600;
       display:inline-flex;align-items:center;justify-content:center;
-      font-size:14px;font-weight:650;
       transition:.15s ease;
     }
-    .btn:hover{transform:translateY(-1px)}
+    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.08)}
     .btn.primary{
-      background:var(--ink);color:#fff;border-color:rgba(0,0,0,.10);
-      box-shadow:0 18px 36px rgba(11,18,32,.22);
+      background:#fff;color:#0b0f18;border-color:#fff;
+    }
+    .menuBtn{
+      height:42px;width:42px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      display:inline-flex;align-items:center;justify-content:center;
+      cursor:pointer;
+    }
+    .burger{width:18px;height:12px;position:relative}
+    .burger span{
+      position:absolute;left:0;right:0;height:2px;border-radius:2px;background:#fff;opacity:.9
+    }
+    .burger span:nth-child(1){top:0}
+    .burger span:nth-child(2){top:5px;opacity:.75}
+    .burger span:nth-child(3){bottom:0;opacity:.9}
+
+    /* Drawer menu */
+    .drawerBackdrop{
+      position:fixed;inset:0;background:rgba(0,0,0,.55);
+      display:none;z-index:80;
+    }
+    .drawer{
+      position:fixed;top:0;right:0;height:100%;width:min(420px, 92vw);
+      background:linear-gradient(180deg, rgba(12,16,26,.98), rgba(7,10,17,.98));
+      border-left:1px solid rgba(255,255,255,.10);
+      box-shadow:0 40px 120px rgba(0,0,0,.65);
+      transform:translateX(110%);
+      transition:transform .22s ease;
+      z-index:90;
+      padding:18px;
+      display:flex;flex-direction:column;gap:14px;
+    }
+    .drawerTop{display:flex;align-items:center;justify-content:space-between}
+    .drawerTop b{letter-spacing:-.01em}
+    .closeBtn{
+      height:42px;width:42px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      color:#fff;cursor:pointer;
+      display:inline-flex;align-items:center;justify-content:center;
+      font-size:18px;
+    }
+    .drawer a{
+      padding:12px 12px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      color:rgba(238,242,255,.86);
+    }
+    .drawer a:hover{background:rgba(255,255,255,.07)}
+    .drawer .small{color:rgba(238,242,255,.62);font-size:13px;line-height:1.55}
+
+    .drawerFooter{
+      margin-top:auto;
+      border-top:1px solid rgba(255,255,255,.10);
+      padding-top:14px;
+      display:grid;gap:10px;
+    }
+    .socialRow{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      font-size:13px;color:rgba(238,242,255,.72);
     }
 
-    /* HERO (dark investment block) */
-    .hero{padding:56px 0 24px}
-    .heroBox{
-      border-radius:30px;
+    /* Hero */
+    .hero{padding:26px 0 0}
+    .heroCard{
+      position:relative;
+      border-radius:34px;
       overflow:hidden;
       border:1px solid rgba(255,255,255,.10);
       background:
-        radial-gradient(900px 520px at 20% 0%, rgba(42,75,255,.40), transparent 60%),
-        radial-gradient(800px 520px at 90% 10%, rgba(16,185,129,.28), transparent 55%),
-        linear-gradient(180deg, #0b1220 0%, #070b14 100%);
-      box-shadow:0 30px 80px rgba(11,18,32,.28);
+        radial-gradient(900px 520px at 20% 0%, rgba(124,58,237,.28), transparent 60%),
+        radial-gradient(900px 520px at 90% 10%, rgba(16,185,129,.18), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+      min-height: 520px;
     }
-    .heroGrid{
-      display:grid;grid-template-columns:1.15fr .85fr;
-      gap:24px;align-items:stretch;
-      padding:34px;
+    .heroBg{
+      position:absolute;inset:0;
+      background: url("./assets/hero-bg.webp") center/cover no-repeat;
+      filter:saturate(.92) contrast(1.06) brightness(.78);
+      opacity:.85;
     }
-    .kicker{
-      display:inline-flex;gap:10px;align-items:center;
-      font-size:13px;color:rgba(255,255,255,.72);
-      padding:8px 12px;border:1px solid rgba(255,255,255,.10);
-      border-radius:999px;background:rgba(255,255,255,.06);
-      backdrop-filter:blur(6px);
-      width:max-content;
+    .heroBgOverlay{
+      position:absolute;inset:0;
+      background:
+        linear-gradient(90deg, rgba(7,10,17,.86) 0%, rgba(7,10,17,.52) 55%, rgba(7,10,17,.78) 100%),
+        radial-gradient(900px 520px at 25% 10%, rgba(124,58,237,.22), transparent 60%),
+        radial-gradient(900px 520px at 85% 0%, rgba(16,185,129,.14), transparent 60%);
     }
-    .dot{width:8px;height:8px;border-radius:99px;background:#10b981}
-    h1{
-      margin:18px 0 10px;
-      font-family:Fraunces,ui-serif,Georgia,serif;
-      font-size:58px;line-height:1.03;letter-spacing:-.04em;
-      color:#fff;
+    .heroInner{
+      position:relative;
+      padding:54px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      align-items:end;
+      min-height: 520px;
     }
-    .sub{color:rgba(255,255,255,.72);font-size:17px;margin:0;max-width:62ch}
-    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-    .cta .btn{box-shadow:none;border-color:rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff}
-    .cta .btn.primary{background:#fff;color:#0b1220;border-color:#fff}
 
-    .stats{
-      margin-top:22px;
-      display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
-    }
-    .stat{
+    .kicker{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 14px;border-radius:999px;
       border:1px solid rgba(255,255,255,.12);
       background:rgba(255,255,255,.06);
+      color:rgba(238,242,255,.74);
+      font-size:14px;
+      width:max-content;
+    }
+    .dot{width:8px;height:8px;border-radius:99px;background:var(--accent2)}
+    h1{
+      margin:18px 0 12px;
+      font-family:Fraunces,ui-serif,Georgia,serif;
+      font-size:66px;
+      line-height:1.02;
+      letter-spacing:-.05em;
+    }
+    .lead{margin:0;color:rgba(238,242,255,.78);font-size:17px;max-width:64ch}
+    .heroCta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:26px;
+      max-width: 640px;
+    }
+    .stat{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
       border-radius:18px;
       padding:14px 14px;
     }
-    .stat .l{font-size:12px;color:rgba(255,255,255,.68)}
-    .stat .v{margin-top:8px;font-size:20px;font-weight:750;color:#fff;letter-spacing:-.02em}
-    .fine{margin-top:10px;font-size:12px;color:rgba(255,255,255,.55)}
+    .stat .l{font-size:12px;color:rgba(238,242,255,.64)}
+    .stat .v{margin-top:8px;font-weight:700;font-size:18px}
+    .heroNote{margin-top:12px;font-size:12px;color:rgba(238,242,255,.55)}
 
-    /* Right visual */
-    .visual{
+    /* Right panel */
+    .heroPanel{
       border-radius:22px;
-      overflow:hidden;
       border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.04);
-      position:relative;
+      background:rgba(255,255,255,.05);
+      padding:18px;
+      display:grid;gap:10px;
+      align-self:stretch;
       min-height: 360px;
     }
-    .visual img{
-      width:100%;height:100%;object-fit:cover;display:block;
-      filter:saturate(.95) contrast(1.08) brightness(.92);
-      opacity:.92;
+    .panelTitle{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(238,242,255,.62)}
+    .panelItem{
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      border-radius:16px;
+      padding:12px;
+      color:rgba(238,242,255,.80);
+      font-size:14px;
     }
-    .visual:after{
-      content:"";
-      position:absolute;inset:0;
-      background:linear-gradient(180deg, rgba(7,11,20,.05), rgba(7,11,20,.65));
-    }
-    .visualBadge{
-      position:absolute;left:14px;bottom:14px;
-      padding:10px 12px;border-radius:14px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.06);
-      color:rgba(255,255,255,.78);
-      font-size:13px;max-width: 90%;
-      backdrop-filter: blur(8px);
-    }
+    .panelItem b{display:block;font-weight:650;margin-bottom:6px}
+    .panelItem span{display:block;color:rgba(238,242,255,.66);font-size:13px}
 
-    /* Sections (airy) */
-    section{padding:88px 0}
-    .head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:20px}
-    .title{
-      margin:0;
+    /* Sections */
+    section{padding:84px 0}
+    .sectionHead{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:22px}
+    .eyebrow{color:rgba(238,242,255,.62);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+    .h2{
       font-family:Fraunces,ui-serif,Georgia,serif;
-      font-size:34px;letter-spacing:-.03em;
+      font-size:40px;letter-spacing:-.03em;margin:0;
     }
-    .desc{margin:8px 0 0;color:var(--muted);max-width:78ch;font-size:16px}
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .p{margin:0;color:rgba(238,242,255,.72);max-width:80ch}
+
     .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+
     .card{
-      background:var(--card);
-      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
       border-radius:var(--r);
-      box-shadow:var(--shadow2);
       padding:22px;
     }
-    .card h3{margin:0 0 10px;font-size:16px;letter-spacing:-.01em}
-    .card p{margin:0;color:var(--muted);font-size:14px}
+    .card h3{margin:0 0 10px;font-size:18px;letter-spacing:-.01em}
+    .card p{margin:0;color:rgba(238,242,255,.70);font-size:14px}
 
-    /* Image cards */
-    .imgCard{padding:0;overflow:hidden}
-    .imgCard img{width:100%;height:220px;object-fit:cover;display:block}
-    .imgBody{padding:18px 20px 22px}
-    .pillRow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .pill{
-      font-size:12px;color:rgba(11,18,32,.66);
-      padding:6px 10px;border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.55);
-    }
-
-    /* Big quote */
+    /* Quote blocks */
     .quote{
-      border-radius:28px;
-      padding:34px;
-      background:linear-gradient(180deg, rgba(42,75,255,.10), rgba(255,255,255,.60));
-      border:1px solid var(--line);
-      box-shadow:var(--shadow2);
+      display:flex;gap:14px;align-items:flex-start;
+      padding:22px;border-radius:var(--r);
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
     }
-    .quote p{
-      margin:0;
-      font-family:Fraunces,ui-serif,Georgia,serif;
-      font-size:30px;
-      letter-spacing:-.03em;
-      line-height:1.25;
+    .avatar{
+      width:44px;height:44px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
+      overflow:hidden;flex:0 0 auto;
     }
-    .quote small{display:block;margin-top:14px;color:var(--muted);font-size:14px}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .quote p{margin:0;color:rgba(238,242,255,.80)}
+    .quote small{display:block;margin-top:10px;color:rgba(238,242,255,.62)}
 
-    /* Apply */
-    .applyBox{
-      border-radius:30px;
-      padding:26px;
-      background:rgba(255,255,255,.75);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      display:grid;grid-template-columns:1fr .9fr;gap:14px;
-      align-items:start;
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
     }
-    .applyBox .btn{width:100%;justify-content:center;height:46px}
-    .hint{margin-top:10px;color:var(--muted);font-size:13px}
+    .shot{
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      min-height: 180px;
+    }
+    .shot img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95) contrast(1.05) brightness(.82)}
+    .shotFallback{
+      width:100%;height:100%;
+      background: radial-gradient(600px 380px at 20% 0%, rgba(124,58,237,.25), transparent 55%),
+                  radial-gradient(600px 380px at 90% 10%, rgba(16,185,129,.16), transparent 60%),
+                  linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    }
 
-    footer{
-      padding:34px 0 44px;
-      border-top:1px solid var(--line);
-      color:rgba(11,18,32,.60);
-      background:rgba(255,255,255,.35);
+    /* Approach list */
+    .pillGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .pillCard{
+      padding:14px 14px;border-radius:18px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      color:rgba(238,242,255,.78);
+      font-size:14px;
     }
-    .frow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+
+    /* Newsletter + PressKit */
+    .formRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    input[type="email"]{
+      height:46px;min-width:260px;flex:1;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      padding:0 16px;
+      outline:none;
+    }
+    input::placeholder{color:rgba(238,242,255,.55)}
+    .topics{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .chk{
+      display:inline-flex;gap:10px;align-items:center;
+      padding:10px 12px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      color:rgba(238,242,255,.72);
+      font-size:13px;
+    }
+
+    .footer{
+      border-top:1px solid rgba(255,255,255,.10);
+      padding:38px 0 44px;
+      background:rgba(255,255,255,.02);
+      color:rgba(238,242,255,.62);
+      font-size:13px;
+    }
+    .footerRow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .legal a{color:rgba(238,242,255,.62)}
+    .legal a:hover{color:#fff}
 
     @media (min-width: 980px){ nav{display:flex} }
     @media (max-width: 980px){
-      .heroGrid{grid-template-columns:1fr}
-      h1{font-size:44px}
-      section{padding:64px 0}
-      .applyBox{grid-template-columns:1fr}
+      .heroInner{grid-template-columns:1fr;padding:28px}
+      h1{font-size:46px}
+      .grid2,.grid3{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+      .pillGrid{grid-template-columns:1fr 1fr}
     }
-    @media (max-width: 760px){
-      .grid3,.grid2{grid-template-columns:1fr}
-      .stats{grid-template-columns:1fr}
-      .heroGrid{padding:22px}
-      .visual{min-height:280px}
-      .quote p{font-size:24px}
+    @media (max-width: 640px){
+      .gallery{grid-template-columns:1fr}
+      .pillGrid{grid-template-columns:1fr}
     }
   </style>
 </head>
 
 <body>
-  <header class="top">
+
+  <!-- TOP NAV -->
+  <header class="topbar">
     <div class="wrap">
-      <div class="row">
-        <a class="brand" href="#top" aria-label="voyage.ai">
-          <span class="logo-pill"><img src="./logo.jpeg" alt="voyage.ai logo"></span>
+      <div class="toprow">
+        <a class="brand" href="#top">
+          <span class="logoWrap"><img src="./logo.jpeg" alt="voyage.ai logo"></span>
           <b>voyage.ai</b>
         </a>
 
         <nav>
-          <a href="#thesis">Thesis</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#process">Process</a>
-          <a href="#insights">Insights</a>
+          <a href="#about">About</a>
+          <a href="#how">How we work</a>
+          <a href="#portfolio">Companies</a>
+          <a href="#approach">Approach</a>
           <a href="#apply">Apply</a>
         </nav>
 
-        <div style="display:flex;gap:10px;align-items:center">
+        <div class="actions">
           <a class="btn" href="#apply">Get in touch</a>
-          <a class="btn primary" href="#apply">Apply via email</a>
+          <a class="btn primary" href="mailto:bp@voyageai.com?subject=Voyage.ai%20Application">Apply via email</a>
+          <button class="menuBtn" id="openMenu" aria-label="Menu">
+            <span class="burger"><span></span><span></span><span></span></span>
+          </button>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- DRAWER -->
+  <div class="drawerBackdrop" id="backdrop"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawerTop">
+      <b>Menu</b>
+      <button class="closeBtn" id="closeMenu" aria-label="Close">×</button>
+    </div>
+
+    <a href="#about">About</a>
+    <a href="#how">How we work</a>
+    <a href="#portfolio">Companies</a>
+    <a href="#approach">Our approach</a>
+    <a href="#apply">Apply</a>
+
+    <div class="drawerFooter">
+      <div class="small">
+        voyage.ai is a small, operator-led incubation studio for overseas social products and AI tools in ME/IN/SEA. We build with metrics, not hype.
+      </div>
+
+      <div class="socialRow">
+        <span class="pill">LinkedIn</span>
+        <span class="pill">X</span>
+        <span class="pill">Telegram</span>
+        <span class="pill">Email</span>
+      </div>
+    </div>
+  </aside>
+
   <main id="top" class="wrap">
+
     <!-- HERO -->
     <div class="hero">
-      <div class="heroBox">
-        <div class="heroGrid">
+      <div class="heroCard">
+        <div class="heroBg" aria-hidden="true"></div>
+        <div class="heroBgOverlay" aria-hidden="true"></div>
+
+        <div class="heroInner">
           <div>
-            <div class="kicker"><span class="dot"></span><span>Incubation studio · Social × AI Tools · Middle East / India / SEA</span></div>
+            <div class="kicker">
+              <span class="dot"></span>
+              <span>Incubation studio · Social × AI Tools · ME / IN / SEA</span>
+            </div>
+
             <h1>Capital discipline.<br/>Product velocity.</h1>
-            <p class="sub">
-              我们用“资本式纪律”做孵化：少废话、快验证、重指标。把出海社交与 AI 工具的增长，
-              变成可复用的周节奏。
+
+            <p class="lead">
+              我们是小而精的孵化器，专注出海社交与 AI 工具。用可复用的周节奏，把验证、增长与利润变成可预期结果。
             </p>
 
-            <div class="cta">
-              <a class="btn primary" href="#apply">Apply (Email)</a>
-              <a class="btn" href="#portfolio">View focus areas</a>
+            <div class="heroCta">
+              <a class="btn primary" href="mailto:bp@voyageai.com?subject=Voyage.ai%20Application">Become a partner</a>
+              <a class="btn" href="#portfolio">Explore companies</a>
             </div>
 
             <div class="stats">
-              <div class="stat"><div class="l">Incubated</div><div class="v">5 projects</div></div>
-              <div class="stat"><div class="l">Peak revenue</div><div class="v">$300k / mo</div></div>
-              <div class="stat"><div class="l">Markets</div><div class="v">ME · IN · SEA</div></div>
+              <div class="stat">
+                <div class="l">Incubated</div>
+                <div class="v">5 projects</div>
+              </div>
+              <div class="stat">
+                <div class="l">Peak revenue</div>
+                <div class="v">$300k / mo (peak)</div>
+              </div>
+              <div class="stat">
+                <div class="l">Markets</div>
+                <div class="v">ME · IN · SEA</div>
+              </div>
             </div>
-            <div class="fine">Data shown reflects peak months of past incubation projects, illustrating repeatable execution patterns.</div>
+
+            <div class="heroNote">
+              Data shown reflects peak months of past incubation projects, illustrating repeatable execution patterns.
+            </div>
           </div>
 
-          <div class="visual">
-            <!-- Image 1: city night (capital/global vibe) -->
-           <img alt="abstract tech visual" src="https://source.unsplash.com/iuEtuEc1Y68/1600x1200">
-            <div class="visualBadge">
-              Built for operators: GTM + retention loops + pricing discipline.
+          <div class="heroPanel">
+            <div class="panelTitle">What you get</div>
+
+            <div class="panelItem">
+              <b>Signal-first validation</b>
+              <span>Use minimal cost to capture real signals: willingness to pay, retention, and channel viability.</span>
+            </div>
+            <div class="panelItem">
+              <b>Distribution playbooks</b>
+              <span>Channel stacks, localization, and pricing tactics tailored for ME/IN/SEA.</span>
+            </div>
+            <div class="panelItem">
+              <b>Retention & monetization loops</b>
+              <span>Interaction design, pay paths, and LTV improvements with reusable templates.</span>
+            </div>
+            <div class="panelItem">
+              <b>Weekly execution cadence</b>
+              <span>Experiment → review → iterate. Make growth a system, not a gamble.</span>
             </div>
           </div>
+
         </div>
       </div>
     </div>
 
-    <!-- THESIS -->
-    <section id="thesis">
-      <div class="head">
-        <div>
-          <h2 class="title">Thesis</h2>
-          <p class="desc">对标“资本网站”的表达方式：少句子、多要点。我们只做能被指标证明的增长。</p>
-        </div>
-      </div>
-
-      <div class="grid3">
-        <div class="card">
-          <h3>Profit-first</h3>
-          <p>先跑出付费意愿与留存信号，再扩大范围与团队。</p>
-        </div>
-        <div class="card">
-          <h3>Distribution-native</h3>
-          <p>从 Day 1 设计渠道与转化路径，增长不是最后补丁。</p>
-        </div>
-        <div class="card">
-          <h3>Weekly cadence</h3>
-          <p>实验 → 复盘 → 迭代，让结果可复制、可预测。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- QUOTE -->
-    <section style="padding-top:0">
-      <div class="quote">
-        <p>We don’t “build more”. We build what moves the metric.</p>
-        <small>出海社交与 AI 工具的共同点：方向清晰 + 反馈快 + 复利增长。</small>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO (image-led, less text) -->
-    <section id="portfolio">
-      <div class="head">
-        <div>
-          <h2 class="title">Portfolio snapshots</h2>
-          <p class="desc">你可以先用匿名卡片占位；后续再替换成真实项目名称/链接。</p>
-        </div>
-      </div>
-
-      <div class="grid3">
-        <div class="card imgCard">
-          <!-- Image 2: abstract tech (premium tech vibe) -->
-          <img alt="abstract waves" src="https://source.unsplash.com/dYksH3vHorc/1200x800">
-          <div class="imgBody">
-            <h3>Social (Voice / Rooms)</h3>
-            <p>Retention loops + monetization path. Built for ME/IN/SEA behaviors.</p>
-            <div class="pillRow">
-              <span class="pill">Middle East</span><span class="pill">Retention</span><span class="pill">ARPPU</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card imgCard">
-          <!-- Image 3: founder working -->
-          <img alt="abstract layered curves" src="https://source.unsplash.com/GfeSASPlepQ/1200x800">
-          <div class="imgBody">
-            <h3>AI Tools (Operator-ready)</h3>
-            <p>Clear packaging, pricing ladder, and conversion funnel.</p>
-            <div class="pillRow">
-              <span class="pill">AI</span><span class="pill">Pricing</span><span class="pill">Landing test</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card imgCard">
-          <img alt="abstract dark waves" src="https://source.unsplash.com/UAsQXiuTzSg/1200x800">
-          <div class="imgBody">
-            <h3>Growth systems</h3>
-            <p>One weekly rhythm: hypothesis → experiment → learn → ship.</p>
-            <div class="pillRow">
-              <span class="pill">Cadence</span><span class="pill">GTM</span><span class="pill">Measurement</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process">
-      <div class="head">
-        <div>
-          <h2 class="title">Process</h2>
-          <p class="desc">流程像资本机构一样“可预期”：每一步都有交付物。</p>
-        </div>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="sectionHead">
+        <div class="eyebrow">About us</div>
+        <h2 class="h2">A small studio with repeatable systems.</h2>
+        <p class="p">We don’t just “advise”. We turn growth into weekly actions and validate everything with metrics.</p>
       </div>
 
       <div class="grid2">
         <div class="card">
-          <h3>01 · Diagnose</h3>
-          <p>目标用户、价值点、1–2 个关键指标（留存/付费/获客成本）。</p>
+          <h3>Operator-led</h3>
+          <p>Built for founders and teams who ship, measure, and iterate — especially in real distribution markets.</p>
         </div>
         <div class="card">
-          <h3>02 · Validate</h3>
-          <p>落地页 + 脚本 + 冷启动渠道，最快拿到真实信号。</p>
-        </div>
-        <div class="card">
-          <h3>03 · Build</h3>
-          <p>只做能交付增长的 MVP（基础埋点/监控/评测不缺席）。</p>
-        </div>
-        <div class="card">
-          <h3>04 · Scale</h3>
-          <p>把增长做成例行工作：每周实验、每周复盘、持续迭代。</p>
+          <h3>Capital-efficient</h3>
+          <p>Profit-first mindset: verify signals early, avoid overbuilding, and scale only what moves the metric.</p>
         </div>
       </div>
     </section>
 
-    <!-- INSIGHTS -->
-    <section id="insights">
-      <div class="head">
-        <div>
-          <h2 class="title">Insights</h2>
-          <p class="desc">用内容呈现方法论（先占位也可以，后续你把标题替换成真实文章）。</p>
-        </div>
+    <!-- HOW WE WORK -->
+    <section id="how">
+      <div class="sectionHead">
+        <div class="eyebrow">How we work</div>
+        <h2 class="h2">From diagnosis to scale — in weekly cycles.</h2>
+        <p class="p">Each step has deliverables: positioning, MVP, distribution, retention and monetization. No vague roadmaps.</p>
       </div>
 
       <div class="grid3">
         <div class="card">
-          <h3>Playbook: Social cold start</h3>
-          <p>渠道组合 + 新手激活 + 互动结构，让留存更早出现。</p>
+          <h3>01 · Diagnose</h3>
+          <p>Define the user, the value, and the one metric that matters right now (retention / paid / CAC).</p>
         </div>
         <div class="card">
-          <h3>Playbook: AI pricing</h3>
-          <p>价值点提炼 → 方案包装 → 定价梯度 → 付费路径。</p>
+          <h3>02 · Validate</h3>
+          <p>Landing + script + channel tests to capture signal fast — before heavy build.</p>
         </div>
         <div class="card">
-          <h3>Template: Weekly experiments</h3>
-          <p>假设、成本、信号、复盘，4 周节奏稳定推进。</p>
+          <h3>03 · Scale</h3>
+          <p>Weekly experiments with measurement. Keep what works, cut what doesn’t.</p>
         </div>
       </div>
     </section>
 
-    <!-- APPLY -->
-    <section id="apply">
-      <div class="head">
-        <div>
-          <h2 class="title">Apply</h2>
-          <p class="desc">一封邮件即可。我们更偏好能快速执行、愿意验证、每周能推进一次实验的团队/个人。</p>
-        </div>
+    <!-- QUOTES -->
+    <section id="quotes">
+      <div class="sectionHead">
+        <div class="eyebrow">Operators</div>
+        <h2 class="h2">Built for teams that move the metric.</h2>
+        <p class="p">We optimize for clarity, speed, and repeatability — across product, growth, pricing, and operations.</p>
       </div>
 
-      <div class="applyBox">
-        <div>
-          <h3 style="margin:0 0 8px;font-size:18px;letter-spacing:-.01em">Email: bp@voyageai.com</h3>
-          <p style="margin:0;color:var(--muted)">点击按钮会自动打开你的邮箱并预填申请信息。</p>
-          <div style="margin-top:16px">
-            <a class="btn primary"
-               href="mailto:bp@voyageai.com?subject=Voyage.ai%20Application&body=Hi%20Voyage%2C%0A%0A1)%20One-line%20intro%3A%0A2)%20Product%20type%20(Social%2FAI%20Tool)%3A%0A3)%20Market%20(ME%2FIN%2FSEA%2FGlobal)%3A%0A4)%20Stage%20(Idea%2FPrototype%2FMVP%2FLive)%3A%
+      <div class="grid3">
+        <div class="quote">
+          <div class="avatar">
+            <img src="./assets/quote-1.webp" alt="" onerror="this.remove();">
+          </div>
+          <div>
+            <p>“We don’t build more. We build what moves the metric.”</p>
+            <small>— Growth cadence, not feature accumulation</small>
+          </div>
+        </div>
+
+        <div class="quote">
+          <div class="avatar">
+            <img src="./assets/quote-2.webp" alt="" onerror="this.remove();">
+          </div>
+          <div>
+            <p>“Distribution is part of the product. Design channels from day one.”</p>
+            <small>— ME/IN/SEA GTM discipline</small>
+          </div>
+        </div>
+
+        <div class="quote">
+          <div class="avatar">
+            <img src="./assets/quote-3.webp" alt="" onerror="this.remove();">
+          </div>
+          <div>
+            <p>“Profit-first keeps teams honest — and results compounding.”</p>
+            <small>— Capital efficiency and long-term operations</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <div class="sectionHead">
+        <div class="eyebrow">Inside</div>
+        <h2 class="h2">A studio built for execution.</h2>
+        <p class="p">If you don’t have images yet, upload later — the page will use gradient fallback automatically.</p>
+      </div>
+
+      <div class="gallery">
+        <div class="shot">
+          <img src="./assets/gallery-1.webp" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'shotFallback'}));">
+        </div>
+        <div class="shot">
+          <img src="./assets/gallery-2.webp" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'shotFallback'}));">
+        </div>
+        <div class="shot">
+          <img src="./assets/gallery-3.webp" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'shotFallback'}));">
+        </div>
+        <div class="shot">
+          <img src="./assets/gallery-4.webp" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'shotFallback'}));">
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO / COMPANIES -->
+    <section id="portfolio">
+      <div class="sectionHead">
+        <div class="eyebrow">Companies</div>
+        <h2 class="h2">Portfolio companies (incubated)</h2>
+        <p class="p">
+          We incubate and support overseas social products and AI tools. The examples below are anonymized placeholders (you can replace with real names/links anytime).
+        </p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>Project A — Voice Social</h3>
+          <p>Voice rooms / interactive social. Rebuilt retention loops and monetization paths.</p>
+          <p style="margin-top:10px;color:rgba(238,242,255,.62);font-size:13px">ME · Social · Retention + ARPPU focus</p>
+        </div>
+        <div class="card">
+          <h3>Project B — Overseas Social Growth</h3>
+          <p>Social product growth systems for emerging markets — cold start, activation, and GTM cadence.</p>
+          <p style="margin-top:10px;color:rgba(238,242,255,.62);font-size:13px">IN · Social · GTM + Activation focus</p>
+        </div>
+        <div class="card">
+          <h3>Project C — AI Operator Tools</h3>
+          <p>AI tools for operators: packaged workflows with measurable ROI and disciplined pricing.</p>
+          <p style="margin-top:10px;color:rgba(238,242,255,.62);font-size:13px">SEA · AI Tools · Pricing + Conversion focus</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section id="approach">
+      <div class="sectionHead">
+        <div class="eyebrow">Our approach</div>
+        <h2 class="h2">What we optimize for</h2>
+        <p class="p">Clear direction, fast validation, capital efficiency, and repeatable growth — especially in ME/IN/SEA distribution realities.</p>
+      </div>
+
+      <div class="pillGrid">
+        <div class="pillCard">Profit-first</div>
+        <div class="pillCard">Capital efficiency</div>
+        <div class="pillCard">Distribution-native</div>
+        <div class="pillCard">Retention loops</div>
+        <div class="pillCard">Monetization design</div>
+        <div class="pillCard">Pricing discipline</div>
+        <div class="pillCard">Localized GTM (ME/IN/SEA)</div>
+        <div class="pillCard">Experiment cadence</div>
+        <div class="pillCard">Metrics & instrumentation</div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter">
+      <div class="sectionHead">
+        <div class="eyebrow">Stay in touch</div>
+        <h2 class="h2">Newsletter for operators</h2>
+        <p class="p">Short, actionable notes on distribution, retention, pricing, and GTM experiments.</p>
+      </div>
+
+      <div class="card">
+        <div class="topics">
+          <span class="chk">Market brief</span>
+          <span class="chk">Product & growth</span>
+          <span class="chk">AI tools</span>
+          <span class="chk">Social ops</span>
+        </div>
+
+        <div class="formRow">
+          <input type="email" placeholder="Email" id="nlEmail" />
+          <a class="btn primary" id="subscribeBtn" href="#">Subscribe</a>
+        </div>
+
+        <p style="margin:12px 0 0;color:rgba(238,242,255,.58);font-size:12px">
+          Static site friendly: the button will open your mail client to request subscription.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRESS KIT -->
+    <section id="presskit">
+      <div class="sectionHead">
+        <div class="eyebrow">Press kit</div>
+        <h2 class="h2">Brand assets and basic facts</h2>
+        <p class="p">Request a press kit if you need logo files, boilerplate, or featured metrics.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>Boilerplate</h3>
+          <p>voyage.ai is an operator-led incubation studio for overseas social products and AI tools, focused on ME/IN/SEA. Incubated 5 projects with peak $300k/mo per product.</p>
+        </div>
+        <div class="card">
+          <h3>Press kit request</h3>
+          <p style="margin-top:10px">
+            <a class="btn primary" href="mailto:bp@voyageai.com?subject=Press%20kit%20request" target="_blank" rel="noreferrer">Request via email</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS / APPLY -->
+    <section id="apply">
+      <div class="sectionHead">
+        <div class="eyebrow">Contacts</div>
+        <h2 class="h2">Apply</h2>
+        <p class="p">Send one email. Include: one-line intro, product type (Social/AI Tool), target market (ME/IN/SEA), stage (Idea/Prototype/MVP/Live), link (if any), and the key metric you want to move (retention/paid/CAC).</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>Apply</h3>
+          <p>We prefer founders and teams who execute fast: validate early, run weekly experiments, and stay capital efficient.</p>
+          <p style="margin-top:14px">
+            <a class="btn primary" href="mailto:bp@voyageai.com?subject=Voyage.ai%20Application">
+              Email bp@voyageai.com
+            </a>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>For inquiries</h3>
+          <p style="margin-top:10px;color:rgba(238,242,255,.74)">
+            bp@voyageai.com
+          </p>
+
+          <p style="margin-top:14px;color:rgba(238,242,255,.68)">
+            Remote-first · Hangzhou / Global<br><br>
+            Focus markets: Middle East · India · Southeast Asia
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footerRow">
+          <div>
+            © <span id="y"></span> voyage.ai
+          </div>
+
+          <div class="legal">
+            <a href="#">Privacy Policy</a>
+            &nbsp;&nbsp;·&nbsp;&nbsp;
+            <a href="#">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // drawer menu
+    const openMenu = document.getElementById('openMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    const drawer = document.getElementById('drawer');
+    const backdrop = document.getElementById('backdrop');
+
+    function showDrawer(){
+      drawer.style.transform = 'translateX(0)';
+      drawer.setAttribute('aria-hidden','false');
+      backdrop.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function hideDrawer(){
+      drawer.style.transform = 'translateX(110%)';
+      drawer.setAttribute('aria-hidden','true');
+      backdrop.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    openMenu.addEventListener('click', showDrawer);
+    closeMenu.addEventListener('click', hideDrawer);
+    backdrop.addEventListener('click', hideDrawer);
+    drawer.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', hideDrawer));
+
+    // newsletter: mailto (static-friendly)
+    const subscribeBtn = document.getElementById('subscribeBtn');
+    subscribeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('nlEmail').value || '';
+      const to = "bp@voyageai.com";
+      const subject = encodeURIComponent("Newsletter subscription");
+      const body = encodeURIComponent(
+        "Please subscribe me to the newsletter.\n\nMy email: " + email + "\n\nTopics: Market brief / Product & growth / AI tools / Social ops"
+      );
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
