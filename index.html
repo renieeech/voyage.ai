@@ -3,232 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>voyage.ai — Drive Growth Forward</title>
-  <meta name="description" content="voyage.ai 是一个小而精的孵化器，专注出海社交与 AI 工具。孵化 5 个项目，覆盖中东/印度/东南亚，曾实现单产品单月营收 $300k。邮件申请：bp@voyageai.com" />
-  <meta property="og:title" content="voyage.ai — Drive Growth Forward" />
+  <title>voyage.ai — Incubate Calmly, Grow Consistently</title>
+  <meta name="description" content="voyage.ai 是小而精的孵化器，专注出海社交与 AI 工具。孵化 5 个项目，覆盖中东/印度/东南亚，单产品峰值 $300k/月。申请：bp@voyageai.com" />
+  <meta property="og:title" content="voyage.ai — Incubate Calmly, Grow Consistently" />
   <meta property="og:description" content="小而精孵化器：出海社交 & AI 工具。孵化 5 个项目，覆盖中东/印度/东南亚，单产品峰值 $300k/月。" />
   <meta property="og:type" content="website" />
 
-  <!-- Soft, premium fonts (optional). If blocked, falls back to system fonts. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,600,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg: #f6f5f2;
-      --card: rgba(255,255,255,.78);
-      --text: #0f172a;
-      --muted: rgba(15, 23, 42, .68);
-      --border: rgba(15, 23, 42, .10);
-      --shadow: 0 10px 30px rgba(15, 23, 42, .08);
-      --shadow2: 0 6px 18px rgba(15, 23, 42, .06);
-      --radius: 18px;
-      --radius2: 14px;
-      --max: 1080px;
-      --accent: #2a4bff;
+      --bg:#f6f5f2;
+      --text:#0f172a;
+      --muted:rgba(15,23,42,.68);
+      --border:rgba(15,23,42,.10);
+      --card:rgba(255,255,255,.78);
+      --shadow:0 12px 30px rgba(15,23,42,.08);
+      --shadow2:0 8px 18px rgba(15,23,42,.06);
+      --radius:20px;
+      --radius2:14px;
+      --max:1120px;
+      --accent:#2a4bff;
+      --accent2:#10b981;
     }
-    *{ box-sizing: border-box; }
-    html{ scroll-behavior: smooth; }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
-      background: radial-gradient(900px 500px at 12% 0%, rgba(42,75,255,.10), transparent 60%),
-                  radial-gradient(700px 420px at 88% 0%, rgba(16,185,129,.09), transparent 55%),
-                  radial-gradient(900px 650px at 45% 115%, rgba(99,102,241,.12), transparent 55%),
-                  var(--bg);
-      color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      line-height: 1.5;
+      background:
+        radial-gradient(900px 520px at 12% 0%, rgba(42,75,255,.10), transparent 60%),
+        radial-gradient(720px 480px at 90% 0%, rgba(16,185,129,.10), transparent 55%),
+        radial-gradient(1000px 720px at 45% 115%, rgba(99,102,241,.12), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      line-height:1.55;
     }
-    a{ color: inherit; text-decoration: none; }
-    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
-
-    /* Top bar */
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
     .topbar{
-      position: sticky; top:0; z-index: 50;
-      background: rgba(246,245,242,.72);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
+      position:sticky;top:0;z-index:50;
+      background:rgba(246,245,242,.72);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
     }
-    .topbar .row{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 12px 0;
-      gap: 14px;
-    }
-    .brand{ display:flex; align-items:center; gap: 12px; min-width: 180px; }
+    .row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px;min-width:220px}
     .logo-pill{
-      display:flex; align-items:center; justify-content:center;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: #0b1220;
-      border: 1px solid rgba(255,255,255,.10);
+      display:flex;align-items:center;justify-content:center;
+      padding:7px 11px;border-radius:999px;
+      background:#0b1220;border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 10px 20px rgba(2,6,23,.15);
     }
-    .logo-pill img{ height: 26px; width: auto; display:block; border-radius: 10px; }
-    .brand-name{ font-weight: 600; letter-spacing: -0.02em; }
-    nav{ display:none; gap: 18px; color: var(--muted); font-size: 14px; }
-    nav a:hover{ color: var(--text); }
-    .actions{ display:flex; gap: 10px; align-items:center; }
+    .logo-pill img{height:26px;width:auto;display:block;border-radius:10px}
+    .brand-name{font-weight:650;letter-spacing:-.02em}
+    nav{display:none;gap:18px;color:var(--muted);font-size:14px}
+    nav a{padding:8px 10px;border-radius:999px}
+    nav a:hover{background:rgba(255,255,255,.55);box-shadow:var(--shadow2);color:var(--text)}
+    .actions{display:flex;gap:10px;align-items:center}
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      height: 40px; padding: 0 14px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.55);
-      box-shadow: var(--shadow2);
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text);
+      display:inline-flex;align-items:center;justify-content:center;
+      height:40px;padding:0 14px;border-radius:999px;
+      border:1px solid var(--border);background:rgba(255,255,255,.55);
+      box-shadow:var(--shadow2);font-size:14px;font-weight:650;
+      transition:.15s ease;
     }
-    .btn:hover{ transform: translateY(-1px); transition: .15s ease; }
+    .btn:hover{transform:translateY(-1px)}
     .btn.primary{
-      background: var(--text);
-      color: white;
-      border-color: rgba(0,0,0,.08);
-      box-shadow: 0 12px 26px rgba(15,23,42,.18);
+      background:var(--text);color:#fff;border-color:rgba(0,0,0,.10);
+      box-shadow:0 14px 26px rgba(15,23,42,.18);
     }
 
-    /* Hero */
-    .hero{ padding: 56px 0 22px; }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 26px;
-      align-items: start;
-    }
+    /* spacing system: more airy */
+    .hero{padding:64px 0 18px}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:28px;align-items:start}
     .kicker{
-      display:inline-flex; align-items:center; gap: 10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.6);
-      border: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 13px;
-      box-shadow: var(--shadow2);
+      display:inline-flex;align-items:center;gap:10px;
+      padding:9px 12px;border-radius:999px;
+      background:rgba(255,255,255,.65);border:1px solid var(--border);
+      box-shadow:var(--shadow2);color:var(--muted);font-size:13px
     }
-    .dot{ width: 8px; height: 8px; border-radius: 999px; background: #10b981; }
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--accent2)}
     h1{
-      margin: 18px 0 10px;
-      font-family: Fraunces, ui-serif, Georgia, serif;
-      font-size: 54px;
-      line-height: 1.04;
-      letter-spacing: -0.03em;
+      margin:18px 0 10px;
+      font-family:Fraunces,ui-serif,Georgia,serif;
+      font-size:56px;line-height:1.02;letter-spacing:-.035em;
     }
-    .sub{
-      color: var(--muted);
-      font-size: 17px;
-      margin: 0 0 18px;
-      max-width: 58ch;
-    }
-    .cta{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
-
-    /* Proof stats */
-    .proof{
-      margin-top: 22px;
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
+    .sub{color:var(--muted);font-size:17px;margin:0 0 20px;max-width:64ch}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .proof{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
     .stat{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius2);
-      padding: 14px 14px;
-      box-shadow: var(--shadow2);
+      background:var(--card);border:1px solid var(--border);
+      border-radius:var(--radius2);padding:14px 14px;box-shadow:var(--shadow2)
     }
-    .stat .label{ color: var(--muted); font-size: 12px; }
-    .stat .value{ margin-top: 6px; font-weight: 700; font-size: 18px; letter-spacing: -0.02em; }
-    .fine{ margin-top: 10px; color: rgba(15,23,42,.55); font-size: 12px; }
+    .stat .label{color:var(--muted);font-size:12px}
+    .stat .value{margin-top:6px;font-weight:750;font-size:18px;letter-spacing:-.02em}
+    .fine{margin-top:10px;color:rgba(15,23,42,.55);font-size:12px}
 
-    /* Right card */
     .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px;
+      background:var(--card);border:1px solid var(--border);
+      border-radius:var(--radius);box-shadow:var(--shadow);padding:18px
     }
-    .card h3{
-      margin: 0 0 10px;
-      font-size: 14px; letter-spacing: .08em; text-transform: uppercase;
-      color: rgba(15,23,42,.58);
-    }
-    .list{
-      margin: 0; padding: 0; list-style: none;
-      display:grid; gap: 10px;
-    }
+    .card h3{margin:0 0 10px;font-size:13px;letter-spacing:.10em;text-transform:uppercase;color:rgba(15,23,42,.58)}
+    .list{margin:0;padding:0;list-style:none;display:grid;gap:10px}
     .li{
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 12px;
-      background: rgba(255,255,255,.56);
+      border:1px solid var(--border);border-radius:14px;padding:12px;
+      background:rgba(255,255,255,.62)
     }
-    .li b{ display:block; font-size: 14px; }
-    .li span{ display:block; margin-top: 4px; color: var(--muted); font-size: 13px; }
+    .li b{display:block;font-size:14px}
+    .li span{display:block;margin-top:4px;color:var(--muted);font-size:13px}
 
-    /* Sections */
-    section{ padding: 46px 0; }
-    .section-head{
-      display:flex; align-items:flex-end; justify-content:space-between; gap: 14px;
-      margin-bottom: 16px;
-    }
+    section{padding:58px 0}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:18px}
     .section-title{
-      font-family: Fraunces, ui-serif, Georgia, serif;
-      font-size: 28px;
-      letter-spacing: -0.02em;
-      margin:0;
+      font-family:Fraunces,ui-serif,Georgia,serif;
+      font-size:30px;letter-spacing:-.02em;margin:0;
     }
-    .section-desc{ margin:0; color: var(--muted); max-width: 70ch; }
-
-    .grid-3{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .grid-2{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-
+    .section-desc{margin:6px 0 0;color:var(--muted);max-width:80ch}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
     .tile{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow2);
-      padding: 16px;
+      background:var(--card);border:1px solid var(--border);
+      border-radius:var(--radius);box-shadow:var(--shadow2);padding:18px
     }
-    .tile h4{ margin: 0 0 6px; font-size: 16px; letter-spacing: -0.01em; }
-    .tile p{ margin: 0; color: var(--muted); font-size: 14px; }
+    .tile h4{margin:0 0 6px;font-size:16px;letter-spacing:-.01em}
+    .tile p{margin:0;color:var(--muted);font-size:14px}
 
-    /* FAQ */
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .chip{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.55);
+      box-shadow:var(--shadow2);
+      padding:7px 10px;border-radius:999px;font-size:13px;color:var(--muted);
+      cursor:pointer;user-select:none;transition:.15s ease;
+    }
+    .chip:hover{transform:translateY(-1px)}
+    .chip.active{background:rgba(15,23,42,.92);color:#fff;border-color:rgba(15,23,42,.92)}
+    .portfolio{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:12px
+    }
+    .p-card{
+      background:var(--card);border:1px solid var(--border);
+      border-radius:var(--radius);box-shadow:var(--shadow2);
+      padding:16px;display:flex;flex-direction:column;gap:10px
+    }
+    .p-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+    .p-name{font-weight:750;letter-spacing:-.01em}
+    .p-meta{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{
+      font-size:12px;padding:6px 8px;border-radius:999px;
+      border:1px solid var(--border);background:rgba(255,255,255,.55);color:var(--muted)
+    }
+    .p-desc{color:var(--muted);font-size:13px}
+    .metric{display:flex;gap:10px;flex-wrap:wrap;margin-top:2px}
+    .m{
+      flex:1;min-width:120px;
+      border:1px solid var(--border);background:rgba(255,255,255,.58);
+      border-radius:14px;padding:10px;box-shadow:var(--shadow2)
+    }
+    .m .k{font-size:12px;color:var(--muted)}
+    .m .v{margin-top:4px;font-weight:750}
+
     details{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow2);
-      padding: 14px 16px;
+      background:var(--card);border:1px solid var(--border);
+      border-radius:var(--radius);box-shadow:var(--shadow2);
+      padding:14px 16px
     }
-    summary{ cursor: pointer; font-weight: 700; }
-    details p{ margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+    summary{cursor:pointer;font-weight:750}
+    details p{margin:10px 0 0;color:var(--muted);font-size:14px}
 
-    /* Footer */
     footer{
-      padding: 30px 0 40px;
-      color: rgba(15,23,42,.58);
-      border-top: 1px solid var(--border);
-      background: rgba(255,255,255,.35);
+      padding:34px 0 44px;color:rgba(15,23,42,.60);
+      border-top:1px solid var(--border);background:rgba(255,255,255,.38)
     }
-    .footer-row{
-      display:flex; justify-content:space-between; align-items:center; gap: 10px; flex-wrap: wrap;
-      font-size: 13px;
-    }
+    .footer-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px}
 
-    /* Responsive */
-    @media (max-width: 920px){
-      .hero-grid{ grid-template-columns: 1fr; }
-      h1{ font-size: 44px; }
-      nav{ display:none !important; }
+    @media (min-width: 920px){ nav{display:flex} }
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      h1{font-size:46px}
+      section{padding:46px 0}
     }
-    @media (min-width: 920px){
-      nav{ display:flex; }
-    }
-    @media (max-width: 720px){
-      .proof{ grid-template-columns: 1fr; }
-      .grid-3{ grid-template-columns: 1fr; }
-      .grid-2{ grid-template-columns: 1fr; }
-      section{ padding: 36px 0; }
+    @media (max-width: 760px){
+      .proof{grid-template-columns:1fr}
+      .grid-3,.grid-2,.portfolio{grid-template-columns:1fr}
+      h1{font-size:40px}
     }
   </style>
 </head>
@@ -238,18 +199,17 @@
     <div class="wrap">
       <div class="row">
         <a class="brand" href="#top" aria-label="voyage.ai">
-          <span class="logo-pill">
-            <!-- keep your current file name in repo root -->
-            <img src="./logo.jpeg" alt="voyage.ai logo" />
-          </span>
+          <span class="logo-pill"><img src="./logo.jpeg" alt="voyage.ai logo"/></span>
           <span class="brand-name">voyage.ai</span>
         </a>
 
         <nav>
-          <a href="#what">我们提供什么</a>
-          <a href="#approach">孵化方式</a>
-          <a href="#who">适合谁</a>
-          <a href="#faq">FAQ</a>
+          <a href="#thesis">Thesis</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#listings">Opportunities</a>
+          <a href="#process">Process</a>
+          <a href="#insights">Insights</a>
+          <a href="#apply">Apply</a>
         </nav>
 
         <div class="actions">
@@ -265,140 +225,220 @@
     <div class="hero">
       <div class="hero-grid">
         <div>
-          <div class="kicker">
-            <span class="dot"></span>
-            <span>小而精孵化器 · 出海社交 & AI 工具 · Drive Growth Forward</span>
-          </div>
-
-          <h1>Build calmly.<br>Grow consistently.</h1>
-
+          <div class="kicker"><span class="dot"></span><span>Small but serious incubator · Social x AI Tools · Middle East / India / SEA</span></div>
+          <h1>Incubate calmly.<br/>Grow consistently.</h1>
           <p class="sub">
-            voyage.ai 专注帮助出海社交团队与 AI 工具独立开发者，用更低成本验证 PMF，
-            做出“能增长”的最小闭环：定位 → MVP → 分发 → 留存/付费信号。
+            voyage.ai 是一个小而精的孵化器，专注出海社交与 AI 工具。我们用更低成本跑出 PMF 信号，
+            把增长变成<strong>可执行的周节奏</strong>：定位 → MVP → 分发 → 留存/付费。
           </p>
 
           <div class="cta">
             <a class="btn primary" href="#apply">发送申请邮件</a>
-            <a class="btn" href="#what">看看我们怎么做</a>
+            <a class="btn" href="#portfolio">查看孵化方向</a>
           </div>
 
-          <div class="proof" aria-label="key stats">
-            <div class="stat">
-              <div class="label">孵化经验</div>
-              <div class="value">5 个项目</div>
-            </div>
-            <div class="stat">
-              <div class="label">主战市场</div>
-              <div class="value">中东 / 印度 / 东南亚</div>
-            </div>
-            <div class="stat">
-              <div class="label">单产品峰值</div>
-              <div class="value">$300k / 月</div>
-            </div>
+          <div class="proof">
+            <div class="stat"><div class="label">孵化经验</div><div class="value">5 个项目</div></div>
+            <div class="stat"><div class="label">主战市场</div><div class="value">中东 / 印度 / 东南亚</div></div>
+            <div class="stat"><div class="label">单产品峰值</div><div class="value">$300k / 月</div></div>
           </div>
-          <div class="fine">注：以上为历史孵化项目表现（峰值月份），用于展示方法论与执行体系的可复用性。</div>
+          <div class="fine">注：以上为历史孵化项目峰值月份数据，用于展示方法论与执行体系的可复用性。</div>
         </div>
 
         <aside class="card">
-          <h3>你将获得</h3>
+          <h3>你将获得（像机构站一样讲结果）</h3>
           <ul class="list">
-            <li class="li">
-              <b>清晰的 PMF 验证路线</b>
-              <span>把范围收紧到一个闭环，避免“越做越大”。</span>
-            </li>
-            <li class="li">
-              <b>出海社交增长经验</b>
-              <span>冷启动、互动结构、留存循环与付费路径。</span>
-            </li>
-            <li class="li">
-              <b>AI 工具可售卖打法</b>
-              <span>场景包装、定价、渠道与转化漏斗。</span>
-            </li>
-            <li class="li">
-              <b>每周可执行的增长节奏</b>
-              <span>实验设计 → 数据复盘 → 迭代推进。</span>
-            </li>
+            <li class="li"><b>清晰的验证路线</b><span>先跑出信号，再决定是否加码建设。</span></li>
+            <li class="li"><b>多市场实战打法</b><span>本地化渠道、定价、留存循环更关键。</span></li>
+            <li class="li"><b>产品+增长一体</b><span>每周实验、复盘、迭代，避免“只做不长”。</span></li>
+            <li class="li"><b>可复用模板</b><span>落地页结构、冷启动脚本、实验表与复盘框架。</span></li>
           </ul>
         </aside>
       </div>
     </div>
 
-    <!-- WHAT -->
-    <section id="what">
+    <!-- THESIS -->
+    <section id="thesis">
       <div class="section-head">
         <div>
-          <h2 class="section-title">我们提供什么</h2>
-          <p class="section-desc">对标“资本/并购/基金”网站的表达：更克制，更重结果，用关键指标建立信任。</p>
+          <h2 class="section-title">Thesis（孵化理念）</h2>
+          <p class="section-desc">对标 Calm Fund 的 thesis / what we invest in：我们只做“资本效率高、能长期经营、能跑出利润/留存信号”的方向。</p>
         </div>
       </div>
 
       <div class="grid-3">
         <div class="tile">
-          <h4>低风险验证</h4>
-          <p>优先验证“有人愿意用/愿意付费”，而不是先做大而全的系统。</p>
+          <h4>Profit-first, not hype-first</h4>
+          <p>先验证愿意付费/愿意留存的核心场景，再扩大范围与团队。</p>
         </div>
         <div class="tile">
-          <h4>可复用增长体系</h4>
-          <p>建立可持续的周节奏：渠道、转化、留存，每周推进一次。</p>
+          <h4>Distribution is part of product</h4>
+          <p>从第一天就把渠道、转化、留存写进产品设计（而不是最后“补增长”）。</p>
         </div>
         <div class="tile">
-          <h4>多市场实战</h4>
-          <p>中东 / 印度 / 东南亚：本地化渠道与定价策略更重要。</p>
+          <h4>Repeatable weekly cadence</h4>
+          <p>把增长拆成每周能执行的实验计划：可衡量、可复盘、可迭代。</p>
         </div>
       </div>
     </section>
 
-    <!-- APPROACH -->
-    <section id="approach">
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
       <div class="section-head">
         <div>
-          <h2 class="section-title">孵化方式</h2>
-          <p class="section-desc">四步走：聚焦、验证、构建、发布。每一步都对应“能交付的产出”。</p>
+          <h2 class="section-title">Portfolio（孵化方向）</h2>
+          <p class="section-desc">对标 Calm portfolio 的“筛选 + 分类”。这里用匿名项目展示方向与打法，你也可以后续替换成真实项目名。</p>
+        </div>
+      </div>
+
+      <div class="chips" id="chips">
+        <div class="chip active" data-filter="all">All</div>
+        <div class="chip" data-filter="social">出海社交</div>
+        <div class="chip" data-filter="ai">AI 工具</div>
+        <div class="chip" data-filter="me">中东</div>
+        <div class="chip" data-filter="in">印度</div>
+        <div class="chip" data-filter="sea">东南亚</div>
+      </div>
+
+      <div class="portfolio" id="portfolioGrid" style="margin-top:14px">
+        <!-- 你可以把这些卡片替换成真实项目 -->
+        <div class="p-card" data-tags="social me">
+          <div class="p-top">
+            <div>
+              <div class="p-name">匿名项目 A</div>
+              <div class="p-desc">语音/房间型社交：用“互动结构 + 付费路径”提升留存与 ARPPU。</div>
+            </div>
+            <div class="p-meta">
+              <span class="tag">出海社交</span><span class="tag">中东</span>
+            </div>
+          </div>
+          <div class="metric">
+            <div class="m"><div class="k">重点优化</div><div class="v">留存 + 付费路径</div></div>
+            <div class="m"><div class="k">方法</div><div class="v">周实验节奏</div></div>
+          </div>
+        </div>
+
+        <div class="p-card" data-tags="social in">
+          <div class="p-top">
+            <div>
+              <div class="p-name">匿名项目 B</div>
+              <div class="p-desc">陌生人社交：以冷启动渠道组合与新手引导提升激活。</div>
+            </div>
+            <div class="p-meta">
+              <span class="tag">出海社交</span><span class="tag">印度</span>
+            </div>
+          </div>
+          <div class="metric">
+            <div class="m"><div class="k">重点优化</div><div class="v">激活 + 冷启动</div></div>
+            <div class="m"><div class="k">方法</div><div class="v">渠道×转化</div></div>
+          </div>
+        </div>
+
+        <div class="p-card" data-tags="ai sea">
+          <div class="p-top">
+            <div>
+              <div class="p-name">匿名项目 C</div>
+              <div class="p-desc">AI 增长工具：面向运营/投放团队，用模板化工作流降低试错成本。</div>
+            </div>
+            <div class="p-meta">
+              <span class="tag">AI 工具</span><span class="tag">东南亚</span>
+            </div>
+          </div>
+          <div class="metric">
+            <div class="m"><div class="k">价值点</div><div class="v">降本增效</div></div>
+            <div class="m"><div class="k">验证</div><div class="v">付费意愿</div></div>
+          </div>
+        </div>
+
+        <div class="p-card" data-tags="ai me">
+          <div class="p-top">
+            <div>
+              <div class="p-name">匿名项目 D</div>
+              <div class="p-desc">AI 内容/素材工具：用清晰场景包装与定价策略跑出转化。</div>
+            </div>
+            <div class="p-meta">
+              <span class="tag">AI 工具</span><span class="tag">中东</span>
+            </div>
+          </div>
+          <div class="metric">
+            <div class="m"><div class="k">重点优化</div><div class="v">转化漏斗</div></div>
+            <div class="m"><div class="k">方法</div><div class="v">Landing test</div></div>
+          </div>
+        </div>
+
+        <div class="p-card" data-tags="social sea">
+          <div class="p-top">
+            <div>
+              <div class="p-name">匿名项目 E</div>
+              <div class="p-desc">社交+工具结合：将“日活场景”与“付费点”对齐，提升 LTV。</div>
+            </div>
+            <div class="p-meta">
+              <span class="tag">出海社交</span><span class="tag">东南亚</span>
+            </div>
+          </div>
+          <div class="metric">
+            <div class="m"><div class="k">目标</div><div class="v">LTV 提升</div></div>
+            <div class="m"><div class="k">方法</div><div class="v">留存循环</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LISTINGS / OPPORTUNITIES -->
+    <section id="listings">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Opportunities（机会池）</h2>
+          <p class="section-desc">对标 Microns 的“listing + 指标卡片”表达：把机会讲成具体可评估的条目，而不是抽象口号。</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="tile">
+          <h4>出海社交：留存/付费提升</h4>
+          <p>适合已有 DAU、但毛利/留存卡住的团队：重构互动结构与付费路径。</p>
+        </div>
+        <div class="tile">
+          <h4>AI 工具：付费意愿验证</h4>
+          <p>适合有 demo 的独立开发者：用 landing + 定价 + 分发组合，尽快跑出付费信号。</p>
+        </div>
+        <div class="tile">
+          <h4>Agent 工作流：降本增效</h4>
+          <p>适合运营/增长团队：把重复工作 Agent 化，并用指标证明 ROI。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Process（我们怎么推进）</h2>
+          <p class="section-desc">对标 Quiet Light 这类站的“过程清晰 + 结果可预期”：每一步都有明确产出。</p>
         </div>
       </div>
 
       <div class="grid-2">
-        <div class="tile">
-          <h4>01 · 定位与范围</h4>
-          <p>明确目标用户、核心价值与 3 个关键指标（留存/付费/增长信号）。</p>
-        </div>
-        <div class="tile">
-          <h4>02 · 验证与反馈</h4>
-          <p>落地页 + 脚本 + 冷启动渠道，尽快拿到真实信号，快速修正方向。</p>
-        </div>
-        <div class="tile">
-          <h4>03 · 构建与打磨</h4>
-          <p>做出可用 MVP，并补齐基础埋点/监控/评测，让迭代不盲飞。</p>
-        </div>
-        <div class="tile">
-          <h4>04 · 发布与增长循环</h4>
-          <p>公开发布 + 每周实验：让增长变成“可执行流程”，不是灵感。</p>
-        </div>
+        <div class="tile"><h4>01 · Diagnose</h4><p>用 30 分钟把用户、价值点、指标、最大瓶颈定出来。</p></div>
+        <div class="tile"><h4>02 · Validate</h4><p>落地页/脚本/渠道快速验证，拿到真实信号再决定投入。</p></div>
+        <div class="tile"><h4>03 · Build</h4><p>做出能跑的 MVP（含基础埋点/监控/评测），让迭代有方向。</p></div>
+        <div class="tile"><h4>04 · Grow</h4><p>建立每周实验节奏：渠道×转化×留存，持续复盘优化。</p></div>
       </div>
     </section>
 
-    <!-- WHO -->
-    <section id="who">
+    <!-- INSIGHTS -->
+    <section id="insights">
       <div class="section-head">
         <div>
-          <h2 class="section-title">适合谁</h2>
-          <p class="section-desc">我们更偏好能快速执行、愿意做验证的团队/个人。你不需要“完美”，但需要“推进”。</p>
+          <h2 class="section-title">Insights（Playbooks）</h2>
+          <p class="section-desc">对标 SureSwift 的 Blog / Microns 的 Founder’s Library：用内容展示专业度与方法论（可先用占位，后续补充）。</p>
         </div>
       </div>
 
       <div class="grid-3">
-        <div class="tile">
-          <h4>出海社交团队</h4>
-          <p>在互动结构、内容/活动、留存循环、付费路径上需要更快找到增长解法。</p>
-        </div>
-        <div class="tile">
-          <h4>AI 工具开发者</h4>
-          <p>想把“能用的工具”变成“有人愿意付费的产品”，并跑出可持续渠道。</p>
-        </div>
-        <div class="tile">
-          <h4>社交独立开发者</h4>
-          <p>希望小成本验证业务模型，用最小团队做出可迭代的增长节奏。</p>
-        </div>
+        <div class="tile"><h4>Playbook · 出海社交冷启动</h4><p>渠道组合、首日激活、互动结构、留存循环的最小闭环模板。</p></div>
+        <div class="tile"><h4>Playbook · AI 工具定价与转化</h4><p>从价值点提炼 → 方案包装 → 定价梯度 → 付费路径设计。</p></div>
+        <div class="tile"><h4>Guide · 每周增长实验表</h4><p>实验假设、成本、预期信号、复盘框架（让增长可复制）。</p></div>
       </div>
     </section>
 
@@ -406,78 +446,30 @@
     <section id="apply">
       <div class="section-head">
         <div>
-          <h2 class="section-title">邮件申请</h2>
-          <p class="section-desc">最省事的方式：一封邮件，我们就能判断是否匹配，并给你下一步建议。</p>
+          <h2 class="section-title">Apply（邮件申请）</h2>
+          <p class="section-desc">像 Calm 的 “Apply now” 一样直接：一封邮件，我们就能判断是否匹配并给你下一步建议。</p>
         </div>
       </div>
 
       <div class="grid-2">
         <div class="tile">
-          <h4>发到：bp@voyageai.com</h4>
-          <p style="margin-top:10px;color:rgba(15,23,42,.75);font-weight:600;">
-            点击下方按钮会自动打开你的邮箱并预填内容。
+          <h4>发送到：bp@voyageai.com</h4>
+          <p style="margin-top:10px;color:rgba(15,23,42,.75);font-weight:650;">
+            点击按钮自动打开邮箱并预填内容。
           </p>
           <div style="margin-top:14px;">
             <a class="btn primary" style="width:100%;justify-content:center;"
-               href="mailto:bp@voyageai.com?subject=Voyage.ai%20%E7%94%B3%E8%AF%B7%20%7C%20Incubation&body=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E7%94%B3%E8%AF%B7%20voyage.ai%20%E5%AD%B5%E5%8C%96%EF%BC%9A%0A%0A1)%20%E4%B8%80%E5%8F%A5%E8%AF%9D%E4%BB%8B%E7%BB%8D%EF%BC%9A%0A2)%20%E7%9B%AE%E6%A0%87%E7%94%A8%E6%88%B7%EF%BC%9A%0A3)%20%E5%B8%82%E5%9C%BA%EF%BC%88%E4%B8%AD%E4%B8%9C/%E5%8D%B0%E5%BA%A6/%E4%B8%9C%E5%8D%97%E4%BA%9A/%E5%85%A8%E7%90%83%EF%BC%89%EF%BC%9A%0A4)%20%E5%BD%93%E5%89%8D%E9%98%B6%E6%AE%B5%EF%BC%88%E6%83%B3%E6%B3%95/%E5%8E%9F%E5%9E%8B/MVP/%E4%B8%8A%E7%BA%BF%EF%BC%89%EF%BC%9A%0A5)%20Demo/%E9%93%BE%E6%8E%A5%EF%BC%88%E5%A6%82%E6%9E%9C%E6%9C%89%EF%BC%89%EF%BC%9A%0A6)%20%E4%BD%A0%E6%83%B3%E9%AA%8C%E8%AF%81%E7%9A%84%E6%9C%80%E5%85%B3%E9%94%AE%E5%81%87%E8%AE%BE%EF%BC%88%E4%BE%8B%EF%BC%9A%E7%95%99%E5%AD%98/%E4%BB%98%E8%B4%B9/%E6%B8%A0%E9%81%93%E6%88%90%E6%9C%AC%EF%BC%89%EF%BC%9A%0A%0A%E8%B0%A2%E8%B0%A2%EF%BC%81">
+              href="mailto:bp@voyageai.com?subject=Voyage.ai%20%E7%94%B3%E8%AF%B7%20%7C%20Incubation&body=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E7%94%B3%E8%AF%B7%20voyage.ai%20%E5%AD%B5%E5%8C%96%EF%BC%9A%0A%0A1)%20%E4%B8%80%E5%8F%A5%E8%AF%9D%E4%BB%8B%E7%BB%8D%EF%BC%9A%0A2)%20%E7%9B%AE%E6%A0%87%E7%94%A8%E6%88%B7%EF%BC%9A%0A3)%20%E5%B8%82%E5%9C%BA%EF%BC%88%E4%B8%AD%E4%B8%9C/%E5%8D%B0%E5%BA%A6/%E4%B8%9C%E5%8D%97%E4%BA%9A/%E5%85%A8%E7%90%83%EF%BC%89%EF%BC%9A%0A4)%20%E5%BD%93%E5%89%8D%E9%98%B6%E6%AE%B5%EF%BC%88%E6%83%B3%E6%B3%95/%E5%8E%9F%E5%9E%8B/MVP/%E4%B8%8A%E7%BA%BF%EF%BC%89%EF%BC%9A%0A5)%20Demo/%E9%93%BE%E6%8E%A5%EF%BC%88%E5%A6%82%E6%9E%9C%E6%9C%89%EF%BC%89%EF%BC%9A%0A6)%20%E4%BD%A0%E6%83%B3%E9%AA%8C%E8%AF%81%E7%9A%84%E6%9C%80%E5%85%B3%E9%94%AE%E4%BF%A1%E5%8F%B7%EF%BC%88%E7%95%99%E5%AD%98/%E4%BB%98%E8%B4%B9/%E6%B8%A0%E9%81%93%E6%88%90%E6%9C%AC%EF%BC%89%EF%BC%9A%0A%0A%E8%B0%A2%E8%B0%A2%EF%BC%81">
               发送申请邮件
             </a>
           </div>
-          <p style="margin-top:10px;color:rgba(15,23,42,.58);font-size:12px;">
-            我们通常会先判断：方向是否清晰、验证是否可落地、你是否具备每周推进的执行条件。
+          <p style="margin-top:10px;color:rgba(15,23,42,.60);font-size:12px;">
+            我们更看重：方向清晰 + 能执行验证 + 愿意每周推进一次实验。
           </p>
         </div>
 
         <div class="tile">
-          <h4>我们怎么回复你</h4>
-          <p style="margin-top:10px;">你会收到一封结构化回复（不是套话）：</p>
-          <div style="margin-top:12px; display:grid; gap:10px;">
-            <div class="li"><b>1) 快速判断</b><span>是否适合孵化 & 你目前的最大瓶颈在哪里。</span></div>
-            <div class="li"><b>2) 1-2 个验证建议</b><span>最省钱、最快能出信号的动作是什么。</span></div>
-            <div class="li"><b>3) 下一步计划</b><span>如果继续，4 周节奏怎么排、看哪些指标。</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="section-head">
-        <div>
-          <h2 class="section-title">FAQ</h2>
-          <p class="section-desc">回答最常见的三个问题，保持克制清晰。</p>
-        </div>
-      </div>
-
-      <div style="display:grid; gap: 10px;">
-        <details>
-          <summary>你们更像孵化器、基金，还是咨询？</summary>
-          <p>更像“小型孵化器 + 执行型支持”。我们强调可复用的方法论与每周节奏，目标是帮你更快跑出 PMF/增长信号。</p>
-        </details>
-        <details>
-          <summary>需要技术背景吗？</summary>
-          <p>不强制。但你需要能快速执行：每周推进一次实验、能把反馈转成产品迭代。我们会给出低成本、可落地的技术方案建议。</p>
-        </details>
-        <details>
-          <summary>为什么强调中东/印度/东南亚？</summary>
-          <p>这些市场的渠道与定价高度本地化。我们在这些地区做过实战验证，更知道“怎么落地”和“怎么跑出来”。</p>
-        </details>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-row">
-        <div>© <span id="y"></span> voyage.ai · Drive Growth Forward</div>
-        <div style="display:flex; gap: 14px; flex-wrap:wrap;">
-          <a href="#top">Back to top</a>
-          <a href="mailto:bp@voyageai.com">bp@voyageai.com</a>
-        </div>
-      </div>
-    </footer>
-  </main>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+          <h4>我们会怎么回复你</h4>
+          <p style="margin-top:10px;">你会收到结构化建议（不是套话）：</p>
+          <div style="margin-top:12px;display:grid;gap:10px;">
+            <div class="li"><b>1) 是否匹配</b><span>你现在最该验证什么，避免浪费 1–2 个月。</sp
